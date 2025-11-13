@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Foods] (
-    [Id]          INT            IDENTITY (1, 1) NOT NULL,
-    [Name]        NVARCHAR (100) NOT NULL,
+    [Id] INT IDENTITY (1, 1) NOT NULL,
+    [Name] NVARCHAR (100) NOT NULL,
     [Description] NVARCHAR (MAX) NOT NULL, 
     [Fat] DECIMAL(7, 3) NOT NULL,
     [FatSaturates] DECIMAL(7, 3) NOT NULL,
