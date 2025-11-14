@@ -10,5 +10,9 @@
     [Protein] DECIMAL(7, 3) NOT NULL,
     [Salt] DECIMAL(7, 3) NOT NULL,
     [Calcium] DECIMAL(7, 3) NOT NULL,
+   CONSTRAINT [PK_Foods] PRIMARY KEY CLUSTERED 
+   (
+	   [Id] ASC
+   )
 );
 
