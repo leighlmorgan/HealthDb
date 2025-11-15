@@ -1,11 +1,20 @@
 USE [Health]
 GO
 
+/*
+   This script added initial blood sugar readings to the database directly.  It is no longer needed instead:
+
+      1: Export blood sugar readings as mmol/L from the Finetest Lite glucose monitor into the Glook app
+      2: Export blood sugar readings from Glook app as CSV file
+      3: Open CSV file and paste into Excel D:\OneDrive\Mine\Medical\Glooko Data\LoadIntoSQL.xlsx
+      4: Copy the generated SQL from Excel and paste into a new SQL query window
+*/
+
 DECLARE @RC int
 DECLARE @DateTaken smalldatetime
 DECLARE @mmolL decimal(7,3)
 DECLARE @mgdL decimal(7,3)
-/*
+
 SET @DateTaken = '2025-11-13 20:30:00'
 SET @mmolL = 19.1
 EXECUTE @RC = [dbo].[NewBloodSugarReading] @DateTaken, @mmolL,@mgdL

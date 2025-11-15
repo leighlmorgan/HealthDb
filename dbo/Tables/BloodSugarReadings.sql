@@ -13,7 +13,9 @@
 ) ON [PRIMARY]
 GO
 
-ALTER TABLE [dbo].[BloodSugarReadings] ADD  DEFAULT (GETUTCDATE()) FOR [DateRecorded]
+ALTER TABLE [dbo].[BloodSugarReadings] ADD DEFAULT (GETUTCDATE()) FOR [DateRecorded]
+GO
+ALTER TABLE [dbo].[BloodSugarReadings] ADD CONSTRAINT UQ_BloodSugarReadings_DateTaken UNIQUE (DateTaken)
 GO
 
 --EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Blood Sugar Readings' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'BloodSugarReadings', @level2type=N'COLUMN',@level2name=N'Id'
