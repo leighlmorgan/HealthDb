@@ -6,6 +6,7 @@ DECLARE @kj NVARCHAR(20)='kj'
 DECLARE @g NVARCHAR(20)='g'
 DECLARE @mg NVARCHAR(20)='mg'
 DECLARE @ml NVARCHAR(20)='ml'
+DECLARE @µg NVARCHAR(20)='µg'
 
 /*
 -- Porridge

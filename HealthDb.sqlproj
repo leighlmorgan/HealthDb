@@ -70,6 +70,7 @@
     <Folder Include="Scripts" />
     <Folder Include="dbo\Views" />
     <Folder Include="Scripts\Transactional" />
+    <Folder Include="Files" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Foods.sql" />
@@ -91,5 +92,6 @@
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />
     <None Include="Script1.sql" />
+    <None Include="Files\InsertyStatementsForFoodFromWaitroseNutrition.xlsx" />
   </ItemGroup>
 </Project>
