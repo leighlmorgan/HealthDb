@@ -86,6 +86,7 @@
     <None Include="Scripts\Transactional\Add Blood Sugar Reading.sql" />
     <None Include="Scripts\Transactional\Add Food Diary Entry.sql" />
     <Build Include="dbo\Views\DiaryEntries.sql" />
+    <Build Include="dbo\Views\FoodNutrientDetails.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />

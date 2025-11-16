@@ -2,15 +2,17 @@
 
 SELECT 
    fde.DateConsumed,
-   f.Name AS FoodName,
-   n.Name,
-   n.Description,
-   n.Unit,
-   fn.NumberOfUnits,
-   fn.ServingSizeUnits,
-   fn.ServingSizeNumberOfUnits
+   fnd.FoodName,
+   fnd.Name,
+   fde.ServingSize,
+   CONVERT(VARCHAR,fde.ServingSize) + fnd.Unit AS ServingSizeLiteral,
+   fnd.NumberOfUnits * (fde.ServingSize/fnd.ServingSizeNumberOfUnits) AS UnitsConsumed,
+   CONVERT(VARCHAR,fnd.NumberOfUnits * (fde.ServingSize/fnd.ServingSizeNumberOfUnits)) + fnd.Unit AS UnitsConsumedLiteral,
+   fnd.Description,
+   fnd.Unit,
+   fnd.NumberOfUnits,
+   fnd.ServingSizeUnits,
+   fnd.ServingSizeNumberOfUnits
 FROM 
    dbo.FoodDiaryEntries fde
-   INNER JOIN dbo.Foods f ON fde.FoodId = f.Id
-   INNER JOIN dbo.FoodNutrients fn ON f.Id = fn.FoodId
-   INNER JOIN dbo.Nutrients n ON n.Id = fn.NutrientId
+   INNER JOIN dbo.FoodNutrientDetails fnd ON fde.Id = fnd.Id

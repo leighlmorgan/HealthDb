@@ -3,6 +3,7 @@ CREATE TABLE dbo.FoodDiaryEntries (
     DateRecorded SMALLDATETIME NOT NULL,
     DateConsumed SMALLDATETIME NOT NULL,
     FoodId INT NOT NULL,
+    ServingSize FLOAT NOT NULL,
    CONSTRAINT [PK_FoodDiaryEntries] PRIMARY KEY CLUSTERED 
    (
 	   [Id] ASC

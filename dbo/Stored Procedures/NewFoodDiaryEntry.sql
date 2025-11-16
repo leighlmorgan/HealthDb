@@ -1,15 +1,17 @@
 ﻿CREATE PROCEDURE dbo.NewFoodDiaryEntry (
-    @DateConsumed SMALLDATETIME, 
-    @FoodId INT
+    @FoodId INT,
+    @ServingSize FLOAT,
+    @DateConsumed SMALLDATETIME = NULL
 )
 AS
 
    INSERT dbo.FoodDiaryEntries (
       DateConsumed,
-      FoodId
+      FoodId,
+      ServingSize
    )
    VALUES (
-      @DateConsumed,
-      @FoodId
+      COALESCE(@DateConsumed, GETUTCDATE()),
+      @FoodId,
+      @ServingSize
    )
-
