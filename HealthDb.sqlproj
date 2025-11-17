@@ -93,5 +93,6 @@
     <None Include="HealthDb.publish.xml" />
     <None Include="Script1.sql" />
     <None Include="Files\InsertStatementsForFoodFromWaitroseNutrition.xlsx" />
+    <None Include="Files\InsertStatementsForGlucoseReadings.xlsx.xlsx" />
   </ItemGroup>
 </Project>

@@ -6,7 +6,7 @@ GO
 
       1: Export blood sugar readings as mmol/L from the Finetest Lite glucose monitor into the Glook app
       2: Export blood sugar readings from Glook app as CSV file
-      3: Open CSV file and paste into Excel D:\OneDrive\Mine\Medical\Glooko Data\LoadIntoSQL.xlsx
+      3: Open CSV file and paste into Excel Files\InsertStatementsForGlucoseReadings.xlsx
       4: Copy the generated SQL from Excel and paste into a new SQL query window
 */
 
