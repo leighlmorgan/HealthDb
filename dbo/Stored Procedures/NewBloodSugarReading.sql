@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[NewBloodSugarReading] (
     @DateTaken SMALLDATETIME, 
     @mmolPerL AS DECIMAL(7, 3),
-    @mgPerdL AS DECIMAL(7, 3)
+    @mgPerdL AS DECIMAL(7, 3) = NULL
 )
 AS
    DECLARE @HbA1cPercIndicative DECIMAL(7, 3)

@@ -84,7 +84,7 @@
     <None Include="Scripts\PopulateUnits.sql" />
     <Build Include="dbo\Tables\FoodDiaryEntries.sql" />
     <Build Include="dbo\Stored Procedures\NewFoodDiaryEntry.sql" />
-    <None Include="Scripts\Transactional\Add Blood Sugar Reading.sql" />
+    <None Include="Scripts\Transactional\Add Blood Sugar Readings.sql" />
     <None Include="Scripts\Transactional\Add Food Diary Entry.sql" />
     <Build Include="dbo\Views\DiaryEntries.sql" />
     <Build Include="dbo\Views\FoodNutrientDetails.sql" />
@@ -92,6 +92,6 @@
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />
     <None Include="Script1.sql" />
-    <None Include="Files\InsertyStatementsForFoodFromWaitroseNutrition.xlsx" />
+    <None Include="Files\InsertStatementsForFoodFromWaitroseNutrition.xlsx" />
   </ItemGroup>
 </Project>
