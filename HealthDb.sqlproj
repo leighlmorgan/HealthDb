@@ -88,11 +88,15 @@
     <None Include="Scripts\Transactional\Add Food Diary Entry.sql" />
     <Build Include="dbo\Views\DiaryEntries.sql" />
     <Build Include="dbo\Views\FoodNutrientDetails.sql" />
+    <Build Include="dbo\Tables\TimeOfDayRanges.sql" />
+    <Build Include="dbo\Views\BloodSugarReadingDetails.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />
     <None Include="Script1.sql" />
     <None Include="Files\InsertStatementsForFoodFromWaitroseNutrition.xlsx" />
     <None Include="Files\InsertStatementsForGlucoseReadings.xlsx.xlsx" />
+    <None Include="Files\BloodSugarReadingsAnalysis.xlsx" />
+    <None Include="Scripts\PopulateTimeOfDayRanges.sql" />
   </ItemGroup>
 </Project>
