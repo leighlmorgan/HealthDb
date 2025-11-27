@@ -15,6 +15,14 @@ GO
 BEGIN TRAN
 
 -- BEGIN Paste of generated SQL from Excel here
+EXEC [dbo].[NewBloodSugarReading] '2025/11/27 17:09', 9.9
+EXEC [dbo].[NewBloodSugarReading] '2025/11/27 12:04', 14.5
+EXEC [dbo].[NewBloodSugarReading] '2025/11/26 17:07', 10.8
+EXEC [dbo].[NewBloodSugarReading] '2025/11/26 07:22', 8.3
+EXEC [dbo].[NewBloodSugarReading] '2025/11/25 17:22', 14.3
+EXEC [dbo].[NewBloodSugarReading] '2025/11/25 07:10', 8.2
+EXEC [dbo].[NewBloodSugarReading] '2025/11/24 21:18', 10
+EXEC [dbo].[NewBloodSugarReading] '2025/11/24 07:02', 6.6
 EXEC [dbo].[NewBloodSugarReading] '2025/11/23 17:11', 8.7
 EXEC [dbo].[NewBloodSugarReading] '2025/11/23 07:37', 9
 EXEC [dbo].[NewBloodSugarReading] '2025/11/22 17:20', 13
@@ -39,6 +47,7 @@ EXEC [dbo].[NewBloodSugarReading] '2025/11/13 20:30', 19.1
 EXEC [dbo].[NewBloodSugarReading] '2025/11/13 17:49', 11.9
 EXEC [dbo].[NewBloodSugarReading] '2025/11/13 12:19', 16.8
 EXEC [dbo].[NewBloodSugarReading] '2025/11/12 16:34', 19.5
+EXEC [dbo].[NewBloodSugarReading] '2025/11/27 17:09', 9.9
 -- END Paste
 
 SELECT * FROM dbo.BloodSugarReadings order by DateTaken desc
