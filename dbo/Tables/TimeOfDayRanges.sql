@@ -2,7 +2,9 @@
     StartTime TIME NOT NULL,
     EndTime TIME NOT NULL,
     MealRangeName NVARCHAR(100) NOT NULL,
-    PeriodRangeName NVARCHAR(100) NOT NULL
+    MealSortOrder INT NOT NULL,
+    PeriodRangeName NVARCHAR(100) NOT NULL,
+    PeriodSortOrder INT NOT NULL
 )
 GO
 ALTER TABLE dbo.TimeOfDayRanges ADD CONSTRAINT [UQ_TimeOfDayRanges_MealRangeName] UNIQUE (MealRangeName)
