@@ -15,6 +15,7 @@ GO
 BEGIN TRAN
 
 -- BEGIN Paste of generated SQL from Excel here
+EXEC [dbo].[NewBloodSugarReading] '2025/11/28 11:49', 14.0
 EXEC [dbo].[NewBloodSugarReading] '2025/11/27 17:09', 9.9
 EXEC [dbo].[NewBloodSugarReading] '2025/11/27 12:04', 14.5
 EXEC [dbo].[NewBloodSugarReading] '2025/11/26 17:07', 10.8

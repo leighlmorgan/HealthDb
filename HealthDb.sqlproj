@@ -90,6 +90,8 @@
     <Build Include="dbo\Views\FoodNutrientDetails.sql" />
     <Build Include="dbo\Tables\TimeOfDayRanges.sql" />
     <Build Include="dbo\Views\BloodSugarReadingDetails.sql" />
+    <Build Include="dbo\Tables\ReadingRanges.sql" />
+    <None Include="Scripts\PopulateReadingRanges.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />

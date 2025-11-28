@@ -12,7 +12,13 @@ SELECT
 	timeofday.MealSortOrder AS TimeRangeMealSortOrder,
 	timeofday.PeriodSortOrder AS TimeRangePeriodSortOrder,
 	CONVERT(VARCHAR(1), timeofday.MealSortOrder) + ': ' +  timeofday.MealRangeName AS TimeRangeMealWithOrder,
-	CONVERT(VARCHAR(1), timeofday.PeriodSortOrder) + ': ' +  timeofday.PeriodRangeName AS TimeRangePeriodWithOrder
+	CONVERT(VARCHAR(1), timeofday.PeriodSortOrder) + ': ' +  timeofday.PeriodRangeName AS TimeRangePeriodWithOrder,
+	rangeCategory.RangeName,
+	rangeCategory.IsInTarget,
+	rangeCategory.IsAboveTarget,
+	rangeCategory.IsTooHigh
 FROM
 	dbo.BloodSugarReadings reading
 	INNER JOIN dbo.TimeOfDayRanges timeofday ON CONVERT(TIME, reading.DateTaken) BETWEEN timeofday.StartTime AND timeofday.EndTime
+	INNER JOIN dbo.ReadingRanges rangeCategory ON reading.mmolPerL BETWEEN rangeCategory.LowValue and rangeCategory.HighValue
+

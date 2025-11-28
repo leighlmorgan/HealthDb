@@ -1,0 +1,10 @@
+﻿CREATE TABLE dbo.ReadingRanges
+(
+	ID INT IDENTITY (1,1) NOT NULL,
+	LowValue DECIMAL(6,3) NOT NULL,
+	HighValue DECIMAL(6,3) NOT NULL,
+	RangeName NVARCHAR(20) NOT NULL,
+	IsInTarget BIT NOT NULL,
+	IsAboveTarget BIT NOT NULL,
+	IsTooHigh BIT NOT NULL
+)
