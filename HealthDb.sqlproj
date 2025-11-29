@@ -92,6 +92,8 @@
     <Build Include="dbo\Views\BloodSugarReadingDetails.sql" />
     <Build Include="dbo\Tables\ReadingRanges.sql" />
     <None Include="Scripts\PopulateReadingRanges.sql" />
+    <Build Include="dbo\Tables\Dates.sql" />
+    <None Include="Scripts\Transactional\PopulateDates.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="HealthDb.publish.xml" />

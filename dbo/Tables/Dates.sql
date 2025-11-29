@@ -1,0 +1,9 @@
+﻿CREATE TABLE dbo.Dates
+(
+   DateValue SMALLDATETIME NOT NULL PRIMARY KEY,
+   DateYear SMALLINT NOT NULL,
+   DateMonth TINYINT NOT NULL,
+   DateWeek TINYINT NOT NULL,
+   DateWeekNumber CHAR(7) NOT NULL,
+   DateWeekNumberSortBy SMALLINT NOT NULL
+)

@@ -6,5 +6,6 @@
 	RangeName NVARCHAR(20) NOT NULL,
 	IsInTarget BIT NOT NULL,
 	IsAboveTarget BIT NOT NULL,
-	IsTooHigh BIT NOT NULL
+	IsTooHigh BIT NOT NULL,
+	Colour CHAR(6)
 )

@@ -4,7 +4,8 @@ SELECT
 	reading.*,
 	CAST (CONVERT(VARCHAR(10), DateTaken, 101) AS SMALLDATETIME) AS TakenOnDate,
 	CAST(DateTaken AS TIME) AS TakenAtTime,
-	CONVERT(CHAR(4), DATEPART(YEAR, DateTaken)) + '-' + CONVERT(CHAR(4), DATEPART(WEEK, DateTaken)) AS WeekNumber,
+	--CONVERT(CHAR(4), DATEPART(YEAR, DateTaken)) + '-' + CONVERT(CHAR(4), DATEPART(WEEK, DateTaken)) AS WeekNumber,
+	dates.DateWeekNumber AS WeekNumber,
 	timeofday.StartTime AS TimeRangeStartTime,
 	timeofday.EndTime AS TimeRangeEndTime,
 	timeofday.MealRangeName AS TimeRangeMeal,
@@ -21,4 +22,5 @@ FROM
 	dbo.BloodSugarReadings reading
 	INNER JOIN dbo.TimeOfDayRanges timeofday ON CONVERT(TIME, reading.DateTaken) BETWEEN timeofday.StartTime AND timeofday.EndTime
 	INNER JOIN dbo.ReadingRanges rangeCategory ON reading.mmolPerL BETWEEN rangeCategory.LowValue and rangeCategory.HighValue
+	INNER JOIN dbo.Dates dates ON dates.DateValue = CAST (CONVERT(VARCHAR(10), reading.DateTaken, 101) AS SMALLDATETIME)
 
